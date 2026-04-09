@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bharath Motors</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .menu-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .cars {
+            display: none;
+            padding: 20px;
+        }
+
+        .car-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        .car-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .order-btn {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bharath Motors</h1>
+</header>
+
+<div class="hero">
+    Premium Cars Collection
+</div>
+
+<button class="menu-btn" onclick="showCars()">View Cars</button>
+
+<div class="cars" id="carSection">
+
+    <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
+        <h2>BMW X5</h2>
+        <p>Luxury SUV with powerful engine and premium interior.</p>
+        <h3>Price: ₹95,00,000</h3>
+        <button class="order-btn" onclick="orderCar('BMW X5')">Place Order</button>
+    </div>
+
+    <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+        <h2>Audi A6</h2>
+        <p>Elegant sedan with advanced technology and comfort.</p>
+        <h3>Price: ₹70,00,000</h3>
+        <button class="order-btn" onclick="orderCar('Audi A6')">Place Order</button>
+    </div>
+
+    <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1493238792000-8113da705763">
+        <h2>Mercedes-Benz C-Class</h2>
+        <p>Stylish design with smooth performance.</p>
+        <h3>Price: ₹65,00,000</h3>
+        <button class="order-btn" onclick="orderCar('Mercedes C-Class')">Place Order</button>
+    </div>
+
+</div>
+
+<script>
+    function showCars() {
+        document.getElementById("carSection").style.display = "block";
+    }
+
+    function orderCar(carName) {
+        alert("Order placed for " + carName + "!");
+    }
+</script>
+
+</body>
+</html>
